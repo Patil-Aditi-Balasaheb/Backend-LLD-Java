@@ -1,10 +1,9 @@
 package day2.task1_library_management;
 
-abstract class User {
+public abstract class User {
     private String userId;
     private String name;
     private String contactInfo;
-
 
     User() {
         this.userId = generateUniqueId();
@@ -22,23 +21,31 @@ abstract class User {
         this.contactInfo = user.contactInfo;
     }
 
-    String getUserId() {
+    public String getUserId() {
         return this.userId;
     }
 
-    String getName() {
+    public String getName() {
         return this.name;
     }
 
-    String getContactInfo() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getContactInfo() {
         return this.contactInfo;
     }
 
-    String generateUniqueId() {
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
+    }
+
+    private String generateUniqueId() {
         return "r4323";
     }
 
-    abstract void displayDashboard();
+    public abstract void displayDashboard();
 
-    abstract boolean canBorrowBooks();
+    public abstract boolean canBorrowBooks();
 }
