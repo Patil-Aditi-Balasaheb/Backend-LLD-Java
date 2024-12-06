@@ -11,6 +11,7 @@ abstract class User {
     }
 
     User(String name, String contactInfo) {
+        this.userId = generateUniqueId();
         this.name = name;
         this.contactInfo = contactInfo;
     }
