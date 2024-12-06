@@ -4,6 +4,7 @@ public abstract class User {
     private String userId;
     private String name;
     private String contactInfo;
+    private static int totalUsers = 0;
 
     User() {
         this.userId = generateUniqueId();
@@ -41,8 +42,13 @@ public abstract class User {
         this.contactInfo = contactInfo;
     }
 
-    private String generateUniqueId() {
-        return "r4323";
+    private final String generateUniqueId() {
+        totalUsers++;
+        return "User-" + totalUsers;
+    }
+
+    public static int getTotalUsers() {
+        return totalUsers;
     }
 
     public abstract void displayDashboard();
