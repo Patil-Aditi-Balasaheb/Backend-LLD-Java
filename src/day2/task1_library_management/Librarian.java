@@ -1,13 +1,21 @@
 package day2.task1_library_management;
 
-import java.awt.print.Book;
-
 public class Librarian extends User {
     private String employeeNumber;
+
+    Librarian() {
+        super();
+    }
+
+    Librarian(String employeeNumber, String name, String contactInfo) {
+        super(name, contactInfo);
+        this.employeeNumber = employeeNumber;
+    }
 
     @Override
     public void displayDashboard() {
         System.out.println("LIBRARIAN DASHBOARD");
+        System.out.println("Name: " + getName());
         System.out.println("Employee Number: " + employeeNumber);
     }
 
