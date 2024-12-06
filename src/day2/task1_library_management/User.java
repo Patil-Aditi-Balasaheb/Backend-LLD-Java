@@ -17,6 +17,7 @@ abstract class User {
     }
 
     User(User user) {
+        this.userId = generateUniqueId();
         this.name = user.name;
         this.contactInfo = user.contactInfo;
     }
