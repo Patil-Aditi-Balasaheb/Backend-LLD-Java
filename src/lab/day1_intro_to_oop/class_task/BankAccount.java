@@ -1,4 +1,4 @@
-package day1_intro_to_oop.class_task;
+package lab.day1_intro_to_oop.class_task;
 
 import java.util.ArrayList;
 

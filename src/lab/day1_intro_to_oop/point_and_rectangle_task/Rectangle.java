@@ -1,4 +1,4 @@
-package day1_intro_to_oop.point_and_rectangle_task;
+package lab.day1_intro_to_oop.point_and_rectangle_task;
 
 public class Rectangle {
     Point topLeft = new Point();

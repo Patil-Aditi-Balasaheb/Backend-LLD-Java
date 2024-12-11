@@ -1,4 +1,4 @@
-package lab.task1_library_management;
+package lab.day2.task1_library_management;
 
 public abstract class Book implements Lendable {
     private String isbn;
