@@ -1,4 +1,4 @@
-package day2.task1_library_management;
+package lab.task1_library_management;
 
 public abstract class User {
     private String userId;
@@ -54,4 +54,6 @@ public abstract class User {
     public abstract void displayDashboard();
 
     public abstract boolean canBorrowBooks();
+
+    public abstract void returnBook();
 }

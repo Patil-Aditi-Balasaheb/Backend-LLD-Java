@@ -1,4 +1,4 @@
-package day2.task1_library_management;
+package lab.task1_library_management;
 
 public class Librarian extends User {
     private String employeeNumber;
@@ -22,6 +22,11 @@ public class Librarian extends User {
     @Override
     public boolean canBorrowBooks() {
         return true;
+    }
+
+    @Override
+    public void returnBook() {
+
     }
 
     void addNewBook(Book book) {

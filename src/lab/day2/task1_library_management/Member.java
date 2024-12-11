@@ -1,4 +1,4 @@
-package day2.task1_library_management;
+package lab.task1_library_management;
 
 public class Member extends User {
     private int borrowedBooksCount;
@@ -24,5 +24,10 @@ public class Member extends User {
     @Override
     public boolean canBorrowBooks() {
         return borrowedBooksCount < MAX_BORROW_LIMIT;
+    }
+
+    @Override
+    public void returnBook() {
+        borrowedBooksCount--;
     }
 }
