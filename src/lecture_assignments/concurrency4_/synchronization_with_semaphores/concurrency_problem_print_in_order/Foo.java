@@ -2,7 +2,7 @@ package lecture_assignments.concurrency4_.synchronization_with_semaphores.concur
 
 import java.util.concurrent.Semaphore;
 
-private static class Foo {
+public class Foo {
 
     Semaphore fs;
     Semaphore ss;

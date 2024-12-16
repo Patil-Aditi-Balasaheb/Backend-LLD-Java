@@ -2,7 +2,7 @@ package lecture_assignments.concurrency4_.synchronization_with_semaphores.concur
 
 import java.util.concurrent.Semaphore;
 
-private static class FooBar {
+public class FooBar {
     private int n;
     private Semaphore fooSemaphore;
     private Semaphore barSemaphore;
