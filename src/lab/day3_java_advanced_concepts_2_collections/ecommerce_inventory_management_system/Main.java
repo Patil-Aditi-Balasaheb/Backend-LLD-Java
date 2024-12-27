@@ -41,5 +41,24 @@ public class Main {
         for (Item i : inventory.recentViewedItems) {
             System.out.println("ID: " + i.getId() + ", Name: " + i.getName());
         }
+
+        // Milestone 4 - Order Processing with Priority Queue
+        Order o1 = new Order("1", false);
+        Order o2 = new Order("2", false);
+        Order o3 = new Order("3", true);
+        Order o4 = new Order("4", true);
+        Order o5 = new Order("5", false);
+
+        OrderProcessor orderProcessor = new OrderProcessor();
+        orderProcessor.addOrder(o1);
+        orderProcessor.addOrder(o2);
+        orderProcessor.addOrder(o3);
+        orderProcessor.addOrder(o4);
+        orderProcessor.addOrder(o5);
+        System.out.println("Processing Order: " + orderProcessor.processOrder());
+        System.out.println("Processing Order: " + orderProcessor.processOrder());
+        System.out.println("Processing Order: " + orderProcessor.processOrder());
+        System.out.println("Processing Order: " + orderProcessor.processOrder());
+        System.out.println("Processing Order: " + orderProcessor.processOrder());
     }
 }
