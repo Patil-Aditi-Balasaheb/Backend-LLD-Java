@@ -14,7 +14,10 @@ public class OrderProcessor {
     }
 
     public String processOrder() {
-        Order currentOrder =  orders.poll();
-        return currentOrder.getOrderId();
+        if (!orders.isEmpty()) {
+            Order currentOrder = orders.poll();
+            return currentOrder.getOrderId();
+        }
+        return "No orders found";
     }
 }
