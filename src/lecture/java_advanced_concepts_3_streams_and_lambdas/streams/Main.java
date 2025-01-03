@@ -1,8 +1,6 @@
 package lecture.java_advanced_concepts_3_streams_and_lambdas.streams;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -33,7 +31,7 @@ public class Main {
         System.out.println("\nSquare of numbers: " + squares);
 
         // 5. Return length of each string
-        List<String> names = List.of("Aditi", "Tuba", "Ayesha", "Aafreen", "Fiza");
+        List<String> names = List.of("Aditi", "Tuba", "Ayesha", "Aafreen", "Fiza", "Aditi");
         List<Integer> lengths = names.stream().map(s -> s.length()).toList();
         System.out.println("Length of strings: " + lengths);
 
@@ -80,5 +78,21 @@ public class Main {
         // 12. Counts the number of words with a length greater than 5
         long count = names.stream().filter(s -> s.length() > 5).count();
         System.out.println("Count of strings having length greater than 5: " + count);
+
+        // 13. Concatenate a list of strings into a single string
+        String result = names.stream().collect(Collectors.joining(", "));
+        System.out.println("Concatenated names into single string: " + result);
+
+        // 14. Create a map where keys are string lengths and values are string names.
+        Map<Integer, List<String>> groupedByLength = names.stream().collect(Collectors.groupingBy(String::length));
+        System.out.println("Grouped by length: " + groupedByLength);
+
+        // 15. Create a set of all names
+        Set<String> uniqueNames = names.stream().collect(Collectors.toSet());
+        System.out.println("Unique names: " + uniqueNames);
+
+        // 16. Check if all strings have a length greater than 3.
+        boolean allMatch = names.parallelStream().allMatch(s -> s.length() > 3);
+        System.out.println("All strings have a length greater than 3: " + allMatch);
     }
 }
