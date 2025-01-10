@@ -2,10 +2,7 @@ package lecture.java_advanced_concepts_3_streams_and_lambdas.lambdas;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -71,5 +68,14 @@ public class Main {
                 System.out.println(a);
             }
         });
+
+        IntFunction<Integer> square = x -> x * x;
+        System.out.println(square.apply(5));
+
+        BinaryOperator<Integer> addition = (x, y) -> x + y;
+        System.out.println(addition.apply(10, 20));
+
+        Function<Integer, Integer> increment = x -> x + 1;
+        System.out.println(increment.apply(7));
     }
 }
